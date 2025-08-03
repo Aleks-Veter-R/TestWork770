@@ -2,6 +2,7 @@ import webpack, { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import StylelintPlugin from 'stylelint-webpack-plugin';
 import { IWebpackBuildOptions } from './types/types';
 
 const webpackPlugins = ({ mode, paths}: IWebpackBuildOptions): Configuration['plugins'] => {
@@ -11,6 +12,12 @@ const webpackPlugins = ({ mode, paths}: IWebpackBuildOptions): Configuration['pl
     const plugins: Configuration['plugins'] = [
         new HtmlWebpackPlugin({
             template: paths.html,
+        }),
+        new StylelintPlugin({
+            context: 'src',
+            files: ['**/*.css', '**/*.scss', '**/*.less'],
+            fix: true, // Автоматически исправлять ошибки
+            formatter: 'string', // Форматирование вывода
         }),
     ]
 
