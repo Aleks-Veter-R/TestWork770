@@ -1,7 +1,14 @@
 # TestWork770
 Abelohost TestWork770 - test task
 
-## Accounts
+# Запуск проекта
+
+1. Склонировать проект из репозитория - git clone https://github.com/Aleks-Veter-R/TestWork770.git
+2. Зайти в корень проекта - cd TestWork770
+3. Загрузить зависимости - npm install
+4. Запустить локально проект - npm run start
+
+## Accounts - тестовый аккаунт
 
 #### Sophia Brown
 
