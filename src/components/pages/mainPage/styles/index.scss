@@ -115,7 +115,6 @@
         }
     }
 }
-
 @media (max-width: 1200px) {
     .page-main {
         width: 945px;
@@ -128,7 +127,6 @@
         }
     }
 }
-
 @media (max-width: 980px) {
     .page-main {
         width: 100%;
@@ -146,7 +144,6 @@
         }
     }
 }
-
 @media (max-width: 768px) {
     .page-main {
         .product-list {
@@ -156,7 +153,6 @@
         }
     }
 }
-
 @media (max-width: 480px) {
     .page-main {
         padding: 20px 15px;
@@ -173,7 +169,7 @@
             .product-list-item {
                 width: 100%;
                 height: auto;
-                margin: 0 0 15px 0;
+                margin: 0 0 15px;
 
                 img {
                     width: 100%;
