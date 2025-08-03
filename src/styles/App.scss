@@ -1,0 +1,39 @@
+@use './DefaultVars.scss' as defaultVars;
+@use './FontsStyles.scss';
+@use './ResetStyles.scss';
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: defaultVars.$white;
+
+    #root {
+        height: 100%;
+
+        .root-parent {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+
+            .root-header {
+                flex: none;
+            }
+
+            .root-footer {
+                flex: none;
+                background-color: defaultVars.$black;
+            }
+
+            .root-body {
+                flex: 1;
+            }
+        }
+    }
+}
