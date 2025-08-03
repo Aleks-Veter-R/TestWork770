@@ -1,0 +1,24 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.component-app-loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loader {
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: 
+            radial-gradient(farthest-side, defaultVars.$black 94%,defaultVars.$blackGr) top/5px 5px no-repeat,
+            conic-gradient(defaultVars.$blackGr 30%,defaultVars.$black);
+        mask: radial-gradient(farthest-side,defaultVars.$blackGr calc(100% - 5px),defaultVars.$black 0);
+        animation: l12 1s infinite linear;
+    }
+}
+
+@keyframes l12{ 
+    100%{transform: rotate(1turn)}
+}

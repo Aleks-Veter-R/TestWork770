@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+        "outDir": "./public/",
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "es5",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,                   // Настройка для перевода конфига Webpack на TypeScript
+        "esModuleInterop": true,                                // См. выше + использование import вместо CommonJS
+        "baseUrl": ".",                                         // Настройка Alias
+        "paths": {                                              // Настройка Alias
+            "@/*": ["./src"]
+        }
+
+        // "checkJs": false,
+        // "sourceMap": true,
+        // "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        // "useDefineForClassFields": true,
+        // "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        // "skipLibCheck": true,
+        // "allowImportingTsExtensions": false,
+        // "isolatedModules": true,
+        // "moduleDetection": "force",
+        // "noEmit": false,
+        // "strict": true,
+        // "noUnusedLocals": true,
+        // "noUnusedParameters": true,
+        // "noFallthroughCasesInSwitch": true,
+        // "noUncheckedSideEffectImports": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -1,0 +1,188 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.page-main {
+    box-sizing: border-box;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 0;
+
+    h1 {
+        margin-bottom: 35px;
+        font-size: 27px;
+    }
+
+    .product-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .product-list-item {
+            width: 350px;
+            height: 390px;
+            padding: 15px;
+            margin: 7px;
+            box-sizing: border-box;
+            border: 1px solid defaultVars.$gray3;
+            border-radius: 5px;
+            position: relative;
+
+            img {
+                width: 270px;
+                height: auto;
+            }
+
+            .title {
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 600;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+
+            .category {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 15px;
+                color: defaultVars.$gray4;
+                margin-bottom: 12px;
+            }
+
+            .price {
+                text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+                color: defaultVars.$red;
+            }
+
+            .add-to-cart {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                width: 117px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-weight: 600;
+                color: defaultVars.$green;
+                cursor: pointer;
+
+                div {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .wrapp-loader {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .empty-product-list {
+        font-size: 21px;
+        line-height: 23px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .parent-load {
+        height: 350px;
+    }
+
+    .fetch-arror {
+        text-align: center;
+
+        p {
+            margin-bottom: 25px;
+            color: defaultVars.$red;
+        }
+
+        button {
+            height: 39px;
+            width: 150px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 3px;
+            background: defaultVars.$black;
+            color: defaultVars.$white;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .page-main {
+        width: 945px;
+        box-sizing: border-box;
+
+        .product-list {
+            .product-list-item {
+                width: 301px
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .page-main {
+        width: 100%;
+        max-width: 730px;
+        padding: 25px 15px;
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .product-list {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .page-main {
+        .product-list {
+            .product-list-item {
+                width: 302px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .page-main {
+        padding: 20px 15px;
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 23px;
+        }
+
+        .product-list {
+            max-width: 350px;
+            margin: 0 auto;
+
+            .product-list-item {
+                width: 100%;
+                height: auto;
+                margin: 0 0 15px 0;
+
+                img {
+                    width: 100%;
+                }
+
+                .price {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}

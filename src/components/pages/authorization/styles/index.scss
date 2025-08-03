@@ -1,0 +1,96 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.page-authorization {
+    width: 450px;
+    margin: 0 auto;
+    padding: 35px 0;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 35px;
+        font-size: 27px;
+
+        span {
+            margin-left: 20px;
+            font-size: 12px;
+            line-height: 17px;
+            font-weight: 400;
+            cursor: pointer;
+            color: defaultVars.$gray;
+            text-decoration: underline;
+            text-transform: lowercase;
+        }
+
+        span:hover {
+            opacity: 0.6;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            height: 35px;
+            padding: 8px 17px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid defaultVars.$gray2;
+            border-radius: 3px;
+        }
+
+        button {
+            height: 39px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 3px;
+            background: defaultVars.$black;
+            color: defaultVars.$white;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.6;
+        }
+
+        .error {
+            margin-bottom: 25px;
+            text-align: center;
+            color: defaultVars.$red;
+        }
+
+        .fetch-error {
+            margin-bottom: 25px;
+            text-align: center;
+            color: defaultVars.$red;
+            padding: 10px;
+            border: 1px solid defaultVars.$red;
+        }
+    }
+
+    .load-auth {
+        height: 139px;
+    }
+
+    .user-unfo {
+        img {
+            float: left;
+            margin: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page-authorization {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 35px 20px;
+    }
+}
